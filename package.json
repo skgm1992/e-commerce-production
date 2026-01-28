@@ -5,9 +5,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev" : "nodemon --env-file=.env.development app",
-    "prod" : "nodemon --env-file=.env.production app",
-    "start" : "nodemon app",
+    "dev" : "node --env-file=.env.development app",
+    "prod" : "node --env-file=.env.production app",
+    "start" : "node app",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

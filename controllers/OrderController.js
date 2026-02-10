@@ -56,7 +56,7 @@ let ConfirmOrder = async(req, res)=>{
     req.body.invoice_name = invoice_name;
                 
     let dis = pro_result[0].price * pro_result[0].discount / 100;
-    let f_amount = pro_result[0].price - dis + pro_result.shipping;
+    let f_amount = pro_result[0].price - dis + pro_result[0].shipping;
     // console.log(req.body);return;
     let result = await Order.create(req.body);
     const html = fs.readFileSync('template.html', 'utf8');
@@ -140,7 +140,7 @@ let ConfirmOrder = async(req, res)=>{
                     <tr class="item last">
                         <td>Shipping</td>
     
-                        <td>+  &#8377; 150</td>
+                        <td>+  &#8377; ${pro_result[0].shipping}</td>
                     </tr>
     
                     <tr class="total">
